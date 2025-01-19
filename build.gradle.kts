@@ -13,7 +13,9 @@ repositories {
 
 dependencies {
     compileOnly("net.minestom:minestom-snapshots:9803f2bfe3")
+
     compileOnly("dev.kyriji:triton-stom:0.0.0")
+    compileOnly("dev.kyriji:triton-core-minestom:0.0.0")
 }
 
 tasks {
