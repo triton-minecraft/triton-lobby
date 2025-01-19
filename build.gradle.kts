@@ -23,7 +23,7 @@ tasks {
         manifest {
             attributes["Main-Class"] = "dev.kyriji.lobby.TritonLobby"
             attributes["Module-Name"] = "triton-lobby"
-            attributes["Module-Dependencies"] = "minestom-dependencies,triton-core"
+            attributes["Module-Dependencies"] = "triton-dependencies,triton-core"
         }
     }
 
