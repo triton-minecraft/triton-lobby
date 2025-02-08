@@ -16,6 +16,7 @@ dependencies {
 
     compileOnly("dev.kyriji:triton-stom:0.0.0")
     compileOnly("dev.kyriji:triton-core-minestom:0.0.0")
+    compileOnly("dev.kyriji:bmc-api:0.0.0")
 }
 
 tasks {
