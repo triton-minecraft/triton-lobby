@@ -1,5 +1,6 @@
 package dev.kyriji.lobby.feature.selector;
 
+import dev.kyriji.lobby.PlayerCountManager;
 import dev.kyriji.lobby.enums.Game;
 import dev.wiji.bigminecraftapi.BigMinecraftAPI;
 import net.kyori.adventure.text.Component;
@@ -53,9 +54,9 @@ public class SelectorMenu {
 		List<ItemStack> gameItems = new ArrayList<>();
 		for(Game value : Game.values()) {
 			List<Component> lore = new ArrayList<>(value.getDescription());
-			int playerCount = BigMinecraftAPI.getNetworkManager().getPlayers(value.getBmcIdentifier()).size();
+			int playerCount = PlayerCountManager.get().getPlayerCount(value);
 			lore.add(Component.text(""));
-			lore.add(Component.text(playerCount + " playing").color(NamedTextColor.YELLOW));
+			lore.add(Component.text(playerCount + " Playing").color(NamedTextColor.YELLOW));
 
 			List<Component> updatedLore = lore.stream().map(component -> component.decoration(TextDecoration.ITALIC, false)).toList();
 

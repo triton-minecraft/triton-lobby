@@ -30,10 +30,15 @@ public class TritonLobby {
 				.enableWorldEdit()
 				.defaultGameMode(GameMode.ADVENTURE)
 				.playerSpawner(SpawnManager.get().buildPlayerSpawner()
-						.fixed(new SpawnLocation(world, new Pos(0.5, 1, 0.5, 90, 0))))
+						.fixed(new SpawnLocation(world, new Pos(0.5, 1, 0.5, 0, 0))))
 				.start();
 
 		PlayerListener.init();
+		PlayerCountManager.init();
+
+		new PlayerCountManager();
+		new HologramManager();
+
 
 		server.start("0.0.0.0", 25565);
 	}
